@@ -281,6 +281,10 @@
 // })
 // console.log(arrDoubled)
 
+// function maps(x){
+//     return x.map(n => n * 2);
+//   }
+
 
 
 // A wolf in sheep's clothing                      https://www.codewars.com/kata/a-wolf-in-sheeps-clothing/train/javascript
@@ -291,20 +295,60 @@
 //         return "Pls go away and stop eating my sheep"
 //     }return `Oi! Sheep number ${index}! You are about to be eaten by a wolf!`
 // }
-
 // warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]);
 
+// function warnTheSheep(queue) {
+//     const position = queue.reverse().indexOf('wolf');
+//     return position === 0 ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${ position }! You are about to be eaten by a wolf!`;
+//   }
 
 
+// Gravity Flip                                    https://www.codewars.com/kata/5f70c883e10f9e0001c89673/train/javascript
+// const flip = function (d, a) {
+//     if (d === 'R') {
+//         a.sort(function (a, b) {
+
+//             return a - b;
+//         })
+//         return a;
+//     }else if(d ==='L')(a.sort(function (a, b) {
+
+//     return b - a;
+// }))
+// return a;
+// }
 
 
+// Check same case                       https://www.codewars.com/kata/5dd462a573ee6d0014ce715b/train/javascript          
+// function sameCase(a, b){
+//     if(a.toUpperCase()===a && /^[a-zA-Z]/.test(a) && /^[a-zA-Z]/.test(b)){
+//       if(b.toUpperCase()===b && /^[a-zA-Z]/.test(b)){
+//         return 1
+//       }return 0
+//     }else if(a.toLowerCase()===a  && /^[a-zA-Z]/.test(a) && /^[a-zA-Z]/.test(b)){
+//        if(b.toLowerCase()===b && /^[a-zA-Z]/.test(b)){
+//         return 1
+//       }return 0
+//     }else{
+//       return -1;
+//     }
+//   }
 
+function sumTwoSmallestNumbers(numbers) {
+    let arrNumb = numbers;
+    let firstminNum =function  (arrNumb) {
+        let minNum = Math.min(arrNumb);
+        console.log(minNum)
+        let index = arrNumb.indexOf(minNum);
+        console.log(index)
+        console.log(arrNumb)
+        return arrNumb.slice(index,1)
+    }
+    console.log(arrNumb)
+    // return firstminNum + secondminNum;
+}
 
-
-
-
-
-
+sumTwoSmallestNumbers([5, 8, 12, 19, 22])
 
 
 
