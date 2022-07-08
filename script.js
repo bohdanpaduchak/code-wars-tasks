@@ -392,21 +392,77 @@
 
 // const quarterOf = m => Math.ceil(m/3);
 
-function elevator(left, right, call){
-    if( call===right){
-        console.log("right")
-      return "right"
-    }else if(call===left){
-        console.log("left")
-        return "left"
-    }else if(call> left && right>left){
-        console.log("right")
-      return "right"
-    }
-    console.log("left")
-    return "left"
-  }
-  elevator(0,1,0);
+
+
+
+
+// Total amount of points        https://www.codewars.com/kata/5bb904724c47249b10000131/train/javascript
+// function points(games) {
+//   let count = 0;
+//   for (game in games) {
+//     let numbers = games[game].split('');
+//     if (numbers[0] === numbers[2]) {
+//       count += 1;
+//     } else if (numbers[0] > numbers[2]) {
+//       count += 3;
+//     } else if (numbers[0] < numbers[2]) {
+//       count += 0;
+//     }
+//   }
+//   return count
+// }
+
+// const points=games=>games.reduce((output,current)=>{
+//   return output += current[0]>current[2] ? 3 : current[0]===current[2] ? 1 : 0;
+// },0)
+
+
+// Pillars         https://www.codewars.com/kata/5bb0c58f484fcd170700063d/train/javascript
+// function pillars(numPill, dist, width) {
+//   if(numPill>1){
+//     return (numPill-2)*width + (numPill-1)*dist*100;
+//   }return 0;
+//  }
+
+//  function pillars(num_pill, dist, width) {
+//   // your code here
+//   return num_pill>1?(num_pill-1)*dist*100+(num_pill-2)*width:0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function elevator(left, right, call){
+//     if( call===right){
+//         console.log("right")
+//       return "right"
+//     }else if(call===left){
+//         console.log("left")
+//         return "left"
+//     }else if(call> left && right>left){
+//         console.log("right")
+//       return "right"
+//     }
+//     console.log("left")
+//     return "left"
+//   }
+//   elevator(0,1,0);
 //   left
 // elevator(0,1,1)
 // right
@@ -416,3 +472,23 @@ function elevator(left, right, call){
 // , 'right'
 // elevator(0,2,1)
 // , 'right'
+
+
+
+
+
+
+// function sumOfDifferences(arr) {
+//   let middleNum=arr[0]+arr[1]+arr[2]-Math.min(...arr)-Math.max(...arr);
+//   if(arr.length>2){
+//     console.log(Math.max(...arr)-middleNum+middleNum-Math.min(...arr));
+//     return Math.max(...arr)-middleNum+middleNum-Math.min(...arr);
+//   }else if(arr.length===2){
+//     console.log(Math.max(...arr)-Math.min(...arr))+(Math.min(...arr)-Math.max(...arr));
+//     return (Math.max(...arr)-Math.min(...arr))+(Math.min(...arr)-Math.max(...arr));
+//   }return 0;
+// }
+// // sumOfDifferences([1, 2, 10])
+// // 9
+// sumOfDifferences([8, 1])
+// // 2
