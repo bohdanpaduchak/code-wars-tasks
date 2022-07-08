@@ -334,26 +334,85 @@
 //     }
 //   }
 
-function sumTwoSmallestNumbers(numbers) {
-    let arrNumb = numbers;
-    let firstminNum =function  (arrNumb) {
-        let minNum = Math.min(arrNumb);
-        console.log(minNum)
-        let index = arrNumb.indexOf(minNum);
-        console.log(index)
-        console.log(arrNumb)
-        return arrNumb.slice(index,1)
+// Sum of two lowest positive integers     https://www.codewars.com/kata/558fc85d8fd1938afb000014/train/javascript
+
+// function sumTwoSmallestNumbers(numbers) {
+//     let arrNumb = numbers;
+//     let minArr = Math.min(...arrNumb);
+//     let firstMinNum = arrNumb.splice(arrNumb.indexOf(minArr), 1)
+//     let minArr2 = Math.min(...arrNumb);
+//     return minArr + minArr2
+// }
+
+// function sumTwoSmallestNumbers(numbers){  
+//     numbers = numbers.sort(function(a, b){return a - b; });
+//     return numbers[0] + numbers[1];
+//   };
+
+
+// Coefficients of the Quadratic Equation              https://www.codewars.com/kata/5d59576768ba810001f1f8d6/train/javascript
+// function quadratic(x1, x2) {
+//     let arr = [1]
+//     function secondNumber(x1, x2) {
+//         if (x1 > 0) {
+//             x1 = -x1;
+//         }else if (x1 < 0 && x1!==0) {
+//             x1=Math.abs(x1)
+//         }
+//         if (x2 > 0) {
+//             x2 = -x2;
+//         }else if (x2 < 0 && x2!==0) {
+//             x2=Math.abs(x2)
+//         }
+//         arr.push(x1 + x2)
+//     }
+//     secondNumber(x1, x2)
+//     arr.push(x1 * x2);
+//     return arr
+// }
+
+// function quadratic(x1, x2){
+//     return [1, -(x2 + x1), (x1 * x2)]
+//  }
+
+
+// Quarter of the year         https://www.codewars.com/kata/5ce9c1000bab0b001134f5af/train/javascript
+
+// const quarterOf = (month) => {
+//     if(month <= 3){
+//       return 1;
+//     }else if(month <= 6){
+//       return 2;
+//     }else if( month <= 9){
+//       return 3;
+//     }else if(month <= 12){
+//       return 4;
+//     }
+//   }
+
+// const quarterOf = m => Math.ceil(m/3);
+
+function elevator(left, right, call){
+    if( call===right){
+        console.log("right")
+      return "right"
+    }else if(call===left){
+        console.log("left")
+        return "left"
+    }else if(call> left && right>left){
+        console.log("right")
+      return "right"
     }
-    console.log(arrNumb)
-    // return firstminNum + secondminNum;
-}
-
-sumTwoSmallestNumbers([5, 8, 12, 19, 22])
-
-
-
-
-
-
-
-
+    console.log("left")
+    return "left"
+  }
+  elevator(0,1,0);
+//   left
+// elevator(0,1,1)
+// right
+// elevator(0,1,2)
+// right
+// elevator(0,0,0)
+// , 'right'
+// elevator(0,2,1)
+// , 'right'
